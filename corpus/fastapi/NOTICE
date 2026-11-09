@@ -1,0 +1,4 @@
+Files in this directory are copied from the FastAPI documentation
+(https://github.com/fastapi/fastapi, docs/en/docs/tutorial, commit ba47d6d71b3e806900c8471f2f661781b8c43ec4).
+Content is unmodified; dependencies/index.md and security/index.md were renamed to
+dependencies-index.md and security-index.md. They are distributed under the MIT license in ./LICENSE.

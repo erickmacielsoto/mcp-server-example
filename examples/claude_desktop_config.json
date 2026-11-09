@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "docs-search": {
+      "command": "node",
+      "args": ["/absolute/path/to/mcp-server-example/dist/index.js"],
+      "env": {
+        "DOCS_DIR": "/absolute/path/to/your/markdown/docs"
+      }
+    }
+  }
+}
