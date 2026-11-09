@@ -30,17 +30,17 @@ All tools declare an `outputSchema` and return `structuredContent`, and are anno
 ```mermaid
 flowchart LR
     subgraph Client["MCP client (Claude Desktop / Claude Code)"]
-        LLM[LLM]
+        LLM["LLM"]
     end
     subgraph Server["docs-search MCP server (stdio)"]
-        T1[list_documents]
-        T2[search_docs]
-        T3[read_section]
-        T4[answer_question]
-        IDX[(BM25 index<br/>heading-aware sections)]
+        T1["list_documents"]
+        T2["search_docs"]
+        T3["read_section"]
+        T4["answer_question"]
+        IDX[("BM25 index<br/>heading-aware sections")]
     end
-    MD[/"Markdown folder<br/>(DOCS_DIR)"/] -->|split by heading + anchor| IDX
-    LLM -- tools/call --> T1 & T2 & T3 & T4
+    MD[/"Markdown folder<br/>(DOCS_DIR)"/] -->|"split by heading + anchor"| IDX
+    LLM -- "tools/call" --> T1 & T2 & T3 & T4
     T2 & T3 & T4 --> IDX
     T4 -- "sampling/createMessage<br/>(if supported)" --> LLM
 ```
